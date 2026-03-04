@@ -3,29 +3,179 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sales contact — Adam Cracknell</title>
+  <title>Contact — Adam Cracknell</title>
+  <meta name="description" content="Save contact details for Adam Cracknell (GP Batteries UK Ltd.)." />
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 40px; line-height: 1.4; }
-    .card { max-width: 560px; padding: 20px; border: 1px solid #ddd; border-radius: 14px; }
-    .name { font-size: 22px; font-weight: 700; margin: 0 0 6px; }
-    .meta { margin: 0 0 14px; color: #444; }
-    a.btn { display: inline-block; padding: 10px 14px; border-radius: 10px; border: 1px solid #111; text-decoration: none; }
-    .small { margin-top: 14px; color: #666; font-size: 13px; }
+    :root{
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: rgba(15,23,42,.10);
+      --shadow: 0 10px 30px rgba(15,23,42,.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+      padding: 22px 14px;
+    }
+    .wrap{ max-width: 760px; margin: 0 auto; }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .top{
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(15,23,42,.02), transparent);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 650; letter-spacing: .2px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .dot{ width:10px; height:10px; border-radius:999px; background: #16a34a; }
+    .name{ margin: 10px 0 4px; font-size: 24px; font-weight: 850; }
+    .role{ margin:0; color: var(--muted); font-size: 15px; }
+
+    .content{ padding: 14px 18px 18px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+
+    .row{
+      display:flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 12px 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(2,6,23,.02);
+    }
+    .label{
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .value{
+      text-align: left;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .value a{
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .value a:hover{ text-decoration: underline; }
+
+    .actions{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .btn{
+      display:flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      text-decoration:none;
+      font-weight: 800;
+      color: var(--text);
+      background: #fff;
+    }
+    .btn.primary{
+      border-color: rgba(22,163,74,.25);
+      background: linear-gradient(180deg, rgba(22,163,74,.14), rgba(22,163,74,.06));
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    .hint{
+      margin: 12px 2px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (min-width: 620px){
+      body{ padding: 40px 18px; }
+      .top{ padding: 22px 22px 14px; }
+      .content{ padding: 18px 22px 22px; }
+      .grid{ grid-template-columns: 1fr 1fr; }
+      .row{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .label{ min-width: 90px; }
+      .value{ text-align: right; }
+      .actions{ grid-template-columns: 1fr 1fr; }
+      .actions .primary{ grid-column: span 2; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <p class="name">Adam Cracknell</p>
-    <p class="meta">Sales Manager UK and Ireland — GP Batteries UK Ltd.</p>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <div class="brand"><span class="dot"></span> GP Batteries UK Ltd.</div>
+        <h1 class="name">Adam Cracknell</h1>
+        <p class="role">Sales Manager UK and Ireland</p>
+      </div>
 
-    <p>
-      📞 <a href="tel:+447955271623">+44 7955 271623</a><br/>
-      ✉️ <a href="mailto:adam.cracknell@goldpeak.com">adam.cracknell@goldpeak.com</a><br/>
-      🌐 <a href="https://gpbatteries.co.uk" target="_blank" rel="noopener">GPBatteries.co.uk</a>
-    </p>
+      <div class="content">
+        <div class="grid">
+          <div class="row">
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+447955271623">+44 7955 271623</a></div>
+          </div>
 
-    <p><a class="btn" href="./Adam.vcf">Add to contacts</a></p>
-    <p class="small">If the button doesn’t work, open this page in your phone browser and try again.</p>
+          <div class="row">
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:adam.cracknell@goldpeak.com">adam.cracknell@goldpeak.com</a></div>
+          </div>
+
+          <div class="row" style="grid-column: 1 / -1;">
+            <div class="label">Website</div>
+            <div class="value"><a href="https://gpbatteries.co.uk" target="_blank" rel="noopener">gpbatteries.co.uk</a></div>
+          </div>
+
+          <div class="row" style="grid-column: 1 / -1;">
+            <div class="label">Address</div>
+            <div class="value">
+              <a href="https://www.google.com/maps?q=Monument%20View%2017%2C%20Chelston%20Business%20Park%2C%20TA21%209ND%2C%20Somerset%2C%20United%20Kingdom" target="_blank" rel="noopener">
+                Monument View 17<br/>
+                Chelston Business Park<br/>
+                TA21 9ND, Somerset<br/>
+                United Kingdom
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="./adam-cracknell.vcf">Add to contacts</a>
+          <a class="btn" href="tel:+447955271623">Call</a>
+          <a class="btn" href="mailto:adam.cracknell@goldpeak.com">Email</a>
+          <a class="btn" href="https://www.google.com/maps?q=Monument%20View%2017%2C%20Chelston%20Business%20Park%2C%20TA21%209ND%2C%20Somerset%2C%20United%20Kingdom" target="_blank" rel="noopener">Directions</a>
+        </div>
+
+        <p class="hint">If “Add to contacts” doesn’t open your contact app, download the file and open it from your downloads.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>

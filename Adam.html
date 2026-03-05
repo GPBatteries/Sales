@@ -37,20 +37,34 @@
       border-bottom: 1px solid var(--border);
       background: linear-gradient(180deg, rgba(15,23,42,.02), transparent);
     }
+
+    /* Brand row: name left, bigger logo right */
     .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight: 650; letter-spacing: .2px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap:12px;
+      font-weight: 650;
+      letter-spacing: .2px;
       color: var(--muted);
       font-size: 14px;
     }
-    .brand-logo{
-      width: 18px;
-      height: 18px;
-      border-radius: 4px;
-      display: block;
-      object-fit: contain;
+    .brand-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 0;
     }
-    .dot{ width:10px; height:10px; border-radius:999px; background: #16a34a; }
+    .dot{ width:10px; height:10px; border-radius:999px; background: #16a34a; flex: 0 0 auto; }
+    .brand-logo{
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      display:block;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
     .name{ margin: 10px 0 4px; font-size: 24px; font-weight: 850; }
     .role{ margin:0; color: var(--muted); font-size: 15px; }
 
@@ -131,6 +145,7 @@
       .value{ text-align: right; }
       .actions{ grid-template-columns: 1fr 1fr; }
       .actions .primary{ grid-column: span 2; }
+      .brand-logo{ width: 40px; height: 40px; }
     }
   </style>
 </head>
@@ -139,10 +154,13 @@
     <div class="card">
       <div class="top">
         <div class="brand">
-          <img class="brand-logo" src="./Logo.png" alt="GP Batteries" />
-          <span class="dot"></span>
-          <span>GP Batteries UK Ltd.</span>
+          <div class="brand-left">
+            <span class="dot"></span>
+            <span>GP Batteries UK Ltd.</span>
+          </div>
+          <img class="brand-logo" src="./logo.png" alt="GP Batteries" />
         </div>
+
         <h1 class="name">Adam Cracknell</h1>
         <p class="role">Sales Manager UK and Ireland</p>
       </div>
@@ -181,7 +199,7 @@
           <a class="btn primary" href="./adam.vcf">Add to contacts</a>
           <a class="btn" href="./catalogue.pdf" target="_blank" rel="noopener">Open catalogue (PDF)</a>
           <a class="btn" href="tel:+447955271623">Call</a>
-          <a class="btn" href="mailto:adam_cracknell@goldpeak.com">Email</a>
+          <a class="btn" href="mailto:adam.cracknell@goldpeak.com">Email</a>
           <a class="btn" href="https://www.google.com/maps?q=Monument%20View%2017%2C%20Chelston%20Business%20Park%2C%20TA21%209ND%2C%20Somerset%2C%20United%20Kingdom" target="_blank" rel="noopener">Directions</a>
         </div>
 

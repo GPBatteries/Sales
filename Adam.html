@@ -38,7 +38,7 @@
       background: linear-gradient(180deg, rgba(15,23,42,.02), transparent);
     }
 
-    /* Brand row: name left, bigger logo right */
+    /* Brand row: name left, BIG logo right */
     .brand{
       display:flex;
       align-items:center;
@@ -56,10 +56,12 @@
       min-width: 0;
     }
     .dot{ width:10px; height:10px; border-radius:999px; background: #16a34a; flex: 0 0 auto; }
+
+    /* 3x-ish bigger than the original 18px */
     .brand-logo{
-      width: 34px;
-      height: 34px;
-      border-radius: 6px;
+      width: 54px;
+      height: 54px;
+      border-radius: 10px;
       display:block;
       object-fit: contain;
       flex: 0 0 auto;
@@ -145,7 +147,9 @@
       .value{ text-align: right; }
       .actions{ grid-template-columns: 1fr 1fr; }
       .actions .primary{ grid-column: span 2; }
-      .brand-logo{ width: 40px; height: 40px; }
+
+      /* slightly larger on desktop */
+      .brand-logo{ width: 64px; height: 64px; }
     }
   </style>
 </head>
@@ -158,7 +162,7 @@
             <span class="dot"></span>
             <span>GP Batteries UK Ltd.</span>
           </div>
-          <img class="brand-logo" src="./Logo.png" alt="GP Batteries" />
+          <img class="brand-logo" src="./logo.png" alt="GP Batteries" />
         </div>
 
         <h1 class="name">Adam Cracknell</h1>
@@ -174,7 +178,7 @@
 
           <div class="row">
             <div class="label">Email</div>
-            <div class="value"><a href="mailto:adam.cracknell@goldpeak.com">adam.cracknell@goldpeak.com</a></div>
+            <div class="value"><a href="mailto:adam.cracknell@goldpeak.com">adam_cracknell@goldpeak.com</a></div>
           </div>
 
           <div class="row" style="grid-column: 1 / -1;">
